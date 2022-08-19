@@ -1,3 +1,8 @@
+a {
+  text-decoration: none;
+}
+
+/* START HEADER */
 header{
   width: 100%;
   height: 10vh;
@@ -12,15 +17,18 @@ header{
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
-
-.hanburger_menu_bar{
+.hanburger_menu_bar #open{
   width: 60%;
   height: 4px;
   background-color: white;
   border-radius: 5px;
   border: solid;
   box-shadow: 1px 1px darkgrey;
+}
+.hanburger_menu_bar #open hide{
+  display: none;
 }
 
 .hanburger_menu_bar.a{
@@ -29,3 +37,50 @@ header{
 .hanburger_menu_bar.b{
   margin-bottom: 4px;
 }
+/* END HEADER */
+
+/* START MAIN */
+main {
+  padding: 0 16px;
+}
+.overlay {
+  padding: 64px;
+  background: rgba(255, 255, 255, 0.95);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+.overlay show{
+  opacity: 1;
+  pointer-events: auto;
+}
+.overlay #close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  font-size: 32px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.overlay li{
+  margin-bottom: 40px;
+  font-size: 24px;
+  font-weight: bold;
+  /* なぜか、list-style: none;　が要らなかったよ */
+  cursor: pointer;
+  transition: 0.5s;
+}
+.overlay li:hover {
+  border-bottom: solid 2px #000;
+  color: blue;
+  font-size: 28px;
+}
+/* END MAIN */

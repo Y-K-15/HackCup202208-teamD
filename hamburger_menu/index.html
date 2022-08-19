@@ -8,24 +8,34 @@
 <link rel="stylesheet" href="./style.css">
 <script src="js/script.js"></script>
   <title>ハンバーガーメニュー</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 
 <body>
 
 <!-- START HEADER -->
   <header>
-    <div class="humberger_menu_button">
+    <div class="humberger_menu_button" id="open">
       <div class="hanburger_menu_bar a"></div>
       <div class="hanburger_menu_bar b"></div>
       <div class="hanburger_menu_bar c"></div>
     </div>
   </header>
 <!-- END HEADER -->
+
+<!-- START MAIN -->
+<main>
+  <div class="overlay">
+    <span class="material-symbols-outlined" id="close">close</span>
+    <ul>
+      <li><a href="">✨ チーム紹介 ✨</a></li>
+      <li><a href="">😁 ゲーム① 😁</a></li>
+      <li><a href="">😆 ゲーム② 😆</a></li>
+    </ul>
+  </div>
+</main>
+<!-- END MAIN -->
+
+<script src="./script.js"></script>
 </body>
 </html>
-
-<nav>
-  <ul>
-    <li></li>
-  </ul>
-</nav>
