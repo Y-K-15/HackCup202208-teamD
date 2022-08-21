@@ -1,0 +1,23 @@
+body {
+  display: flex;
+  justify-content: center;
+}
+
+#map{
+  position: relative;
+  width: 1000px;
+  height: 600px;
+  background: #3387a9;
+}
+
+.snake {
+  border-radius: 50%;
+  background-color: skyblue;
+  position: absolute;
+}
+
+.food {
+  background-color: pink;
+  border-radius: 50%;
+  position: absolute;
+}
