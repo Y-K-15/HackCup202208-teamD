@@ -1,16 +1,22 @@
 "use strict";
-{
-  const map = document.getElementById("map");
+{{
+  const map = document.getElementById("js-map");
+  const overMenu = document.getElementById("js-overMenu");
+  const score = document.getElementById("js-score");
+  const restartButton = document.getElementById("js-restartButton");
+  const startMenu = document.getElementById("js-startMenu");
+  const startButton = document.getElementById("js-startButton");
+  var timer;
 
   function Snake() {
     this.width = 20;
     this.height = 20;
     this.direction = "right";
     this.bodyPosition = [
-      { x: 20, y: 20 },
-      { x: 19, y: 20 },
-      { x: 18, y: 20 },
-      { x: 17, y: 20 },
+      { x: 25, y: 15 },
+      { x: 24, y: 15 },
+      { x: 23, y: 15 },
+      { x: 22, y: 15 },
     ];
 
     // show snake
@@ -29,6 +35,28 @@
           snake.className = "snake";
         }
       }
+    };
+
+    this.gameOver = function () {
+      clearInterval(timer);
+      map.classList.add("disabled");
+      overMenu.classList.remove("disabled");
+      let snakeLength = this.bodyPosition.length;
+      score.textContent = snakeLength;
+
+      for ( let i = 0; i < this.bodyPosition.length; i++) {
+        if (this.bodyPosition[i].flag !== null) {
+          map.removeChild(this.bodyPosition[i].flag);
+        }
+      }
+      this.direction = "right";
+      this.bodyPosition = [
+        { x: 25, y: 15 },
+        { x: 24, y: 15 },
+        { x: 23, y: 15 },
+        { x: 22, y: 15 },
+      ];
+      this.show();
     };
 
     this.run = function () {
@@ -61,24 +89,20 @@
         this.bodyPosition[0].y < 0 ||
         this.bodyPosition[0].y > 29
       ) {
-        clearInterval(timer);
-        alert("Game Over!");
-
-        for (let i = 0; i < this.bodyPosition.length; i++) {
-          if (this.bodyPosition[i].flag !== null) {
-            map.removeChild(this.bodyPosition[i].flag);
-          }
-        }
-        this.bodyPosition = [
-          { x: 2, y: 0 },
-          { x: 1, y: 0 },
-          { x: 0, y: 0 },
-        ];
-        this.direction = "right";
-        this.show();
+        this.gameOver();
         return false;
       }
 
+      // eat_self => game over
+      for (let i = 4; i < this.bodyPosition.length; i++) {
+        if (
+          this.bodyPosition[0].x === this.bodyPosition[i].x &&
+          this.bodyPosition[0].y === this.bodyPosition[i].y
+        ) {
+          this.gameOver();
+          return false;
+        }
+      }
 
       // eat_food
       if (
@@ -91,31 +115,6 @@
         food.show();
       }
 
-      // eat_self => game over
-      for (let i = 4; i < this.bodyPosition.length; i++) {
-        if (
-          this.bodyPosition[0].x === this.bodyPosition[i].x &&
-          this.bodyPosition[0].y === this.bodyPosition[i].y
-        ) {
-          clearInterval(timer);
-          alert("Game Over!");
-
-          for (let i = 0; i < this.bodyPosition.length; i++) {
-            if (this.bodyPosition[i].flag !== null) {
-              map.removeChild(this.bodyPosition[i].flag);
-            }
-          }
-          this.bodyPosition = [
-            { x: 2, y: 0 },
-            { x: 1, y: 0 },
-            { x: 0, y: 0 },
-          ];
-          this.direction = "right";
-          this.show();
-          return false;
-        }
-      }
-
       for (let i = 0; i < this.bodyPosition.length; i++) {
         if (this.bodyPosition[i].flag !== null) {
           map.removeChild(this.bodyPosition[i].flag);
@@ -123,12 +122,23 @@
       }
 
       this.show();
+
+      // eat_food
+      if (
+        this.bodyPosition[0].x === food.x &&
+        this.bodyPosition[0].y === food.y
+      ) {
+        this.bodyPosition.push({ x: null, y: null, flag: null });
+
+        map.removeChild(food.flag);
+        food.show();
+      }
     };
   }
 
   function Food() {
-    this.width = 15;
-    this.height = 15;
+    this.width = 20;
+    this.height = 20;
     this.show = function () {
       let food = document.createElement("div");
       this.flag = food;
@@ -177,5 +187,31 @@
     }
   };
 
-  const timer = setInterval("snake.run()", 500);
+  // const timer = setInterval("snake.run()", 500);
+
+  startButton.addEventListener("click", () => {
+    startMenu.classList.add("disabled");
+    map.classList.remove("disabled");
+    timer = setInterval("snake.run()", 500);
+
+  });
+
+  restartButton.addEventListener("click", () => {
+    overMenu.classList.add("disabled");
+    map.classList.remove("disabled");
+    timer = setInterval("snake.run()", 500);
+  });
+
+}
+
+  // startButton.addEventListener("click", () => {
+  //   startMenu.classList.add("disabled");
+  //   map.classList.remove("disabled");
+  // });
+
+  // restartButton.addEventListener("click", () => {
+  //   overMenu.classList.add("disabled");
+  //   map.classList.remove("disabled");
+  // });
+
 }
