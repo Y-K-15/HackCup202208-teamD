@@ -21,10 +21,10 @@
       this.height = unit;
       this.direction = "right";
       this.bodyPosition = [
-        { x: 15, y: 15 },
-        { x: 14, y: 15 },
-        { x: 13, y: 15 },
-        { x: 12, y: 15 },
+        { x: 6, y: 15 },
+        { x: 5, y: 15 },
+        { x: 4, y: 15 },
+        { x: 3, y: 15 },
       ];
 
       // show snake
@@ -59,10 +59,10 @@
         }
         this.direction = "right";
         this.bodyPosition = [
-          { x: 15, y: 15 },
-          { x: 14, y: 15 },
-          { x: 13, y: 15 },
-          { x: 12, y: 15 },
+          { x: 6, y: 15 },
+          { x: 5, y: 15 },
+          { x: 4, y: 15 },
+          { x: 3, y: 15 },
         ];
         this.show();
       };
