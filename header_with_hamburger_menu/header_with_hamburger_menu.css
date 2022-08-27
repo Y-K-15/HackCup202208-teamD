@@ -56,8 +56,8 @@ header {
 .hamburger_menu_bar_second {
   margin-bottom: 4px;
 }
-/* END HEADER  */
 
+/* START GLOBAL NAVIGATION */
 .overlay_menu {
   width: 100%;
   height: 100%;
@@ -97,9 +97,45 @@ header {
   font-size: 24px;
   font-weight: bold;
   cursor: pointer;
+  transition: 0.5s;
 }
 .overlay_menu li:hover {
-  border-bottom: solid 2px #000;
   color: blue;
   font-size: 28px;
 }
+
+.pc_menu{
+  display: none;
+}
+
+@media (min-width: 600px) {
+  .pc_menu{
+    display: block;
+    width: 50%;
+  }
+  .pc_menu_global_navigation{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .pc_menu ul{
+    width: 100%;
+    padding-right: 5%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .hamburger_menu_button_area_to_open{
+    display: none;
+  }
+}
+/* END GLOBAL NAVIGATION */
+/* END HEADER  */
+
+/* hoverのアニメーションを色々なところにつける */
+/* メニュー（白背景）
+メニューのリスト要素ディレイ
+ロゴ
+ボタン？ */
