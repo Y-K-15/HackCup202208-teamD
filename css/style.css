@@ -27,8 +27,13 @@ main {
   color: white;
 }
 
-.start_menu_section {
+.start_menu_section div{
   font-size: 10vw;
+}
+
+.start_menu_section p{
+  margin-top: 30px;
+  font-size: 2vw;
 }
 
 .over_menu_section {
