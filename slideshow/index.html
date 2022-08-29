@@ -8,9 +8,17 @@
   <title>Document</title>
   <link rel="stylesheet" href="/styles/swiper-bundle.min.css">
   <link rel="stylesheet" href="/styles/slide.css">
+  <!--==============レイアウトを制御する独自のCSSを読み込み===============-->
+  <link rel="stylesheet" type="text/css"
+    href="http://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/move02/5-8/css/reset.css">
+  <link rel="stylesheet" type="text/css"
+    href="http://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/move02/5-8/css/5-8.css">
+  <!--fonts-->
+
 </head>
 
 <body>
+  <div id="particles-js"></div>
   <!-- start hero -->
   <div class="hero"></div>
   <!-- Slider main container -->
@@ -46,7 +54,39 @@
   </div>
   <!--end slides-->
 
+  <!-- start チーム紹介-->
+  <div class="profile_wrapper">
+    <img src="/img/hutaba.png" alt="">
+    <h1>PROFILE</h1>
+    <h2>プロフィール</h2>
+    <div class="profile_content">
+      <div class="profile_area animoBubble1">
+        <img src="/img/masaki.jpg" alt="">
+        <h3>MASAKI</h3>
+        <span>商学部</span>
+      </div>
+      <div class="profile_area animoBubble1">
+        <img src="/img/kaki.jpg" alt="">
+        <h3>KAKI</h3>
+        <span>基幹理工学部</span>
+      </div>
+      <div class="profile_area animoBubble1">
+        <img src="/img/haruki.jpg" alt="">
+        <h3>HARUKI</h3>
+        <span>社会科学部</span>
+      </div>
+      <div class="profile_area animoBubble1">
+        <img src="/img/mayu.jpg" alt="">
+        <h3>MAYU</h3>
+        <span>創造理工学部</span>
+      </div>
+
+    </div>
+  </div>
+
   <script src="/scripts/swiper-bundle.min.js"></script>
   <script src="/scripts/slide.js"></script>
   <!-- end hero-->>
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script src="http://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/move02/5-8/js/5-8.js"></script>
 </body>
