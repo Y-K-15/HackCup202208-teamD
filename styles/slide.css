@@ -104,11 +104,16 @@
 
 .profile_wrapper>img {
   padding: 3%;
+  width: 100%;
 }
 
 h1,
 h3 {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+h3, span{
+  font-size: small;
 }
 
 
@@ -135,7 +140,7 @@ h3 {
   font-size: inherit;
   font-family: inherit;
   color: #fff;
-  padding: .5em 1em;
+  padding: .3em 0.1em;
   outline: 0;
   border: none;
   background-color: #f39c12;
