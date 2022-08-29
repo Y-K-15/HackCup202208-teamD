@@ -1,23 +1,35 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Snake Game</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=DynaPuff&family=Marck+Script&family=Noto+Sans+JP:wght@100;300;400;500;700;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../styles/reset.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com"> 
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+  <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=DynaPuff:wght@400;500;600;700&family=Reggae+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles/reset.css">
   <link rel="stylesheet" href="../styles/snake_game.css">
 </head>
+
 <body>
   <!-- START MAIN -->
   <main>
     <section id="js-startMenu" class="start_menu_section ">
       <div>Snake Game</div>
       <button id="js-startButton">Start!</button>
-      <p>MAP SIZE<br> pc: 800×600<br>tablet:  500×600<br>phone:  300×500</p>
+      <section class="start_menu_instruction">
+        <div class="start_menu_instruction_mapsize">
+          <h1>MAP SIZE</h1>
+          <h2>pc: 800×600<br>tablet: 500×600<br>phone: 300×500</h2>
+        </div>
+        <div class="start_menu_instruction_rule">
+          <h1>説明</h1>
+          <h2>果物を食べると、蛇が長くなる。<br>地図の端に触れると、ゲームアウト。<br>蛇の頭が体に触れると、ゲームアウト。</h2>
+        </div>
+      </section>
+
     </section>
     <div id="js-map" class="main_map disabled"></div>
     <section id="js-overMenu" class="over_menu_section disabled">
@@ -30,4 +42,5 @@
 
   <script src="../scripts/snake_game.js"></script>
 </body>
+
 </html>

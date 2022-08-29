@@ -198,13 +198,13 @@
     startButton.addEventListener("click", () => {
       startMenu.classList.add("disabled");
       map.classList.remove("disabled");
-      timer = setInterval("snake.run()", 500);
+      timer = setInterval("snake.run()", 200);
     });
 
     restartButton.addEventListener("click", () => {
       overMenu.classList.add("disabled");
       map.classList.remove("disabled");
-      timer = setInterval("snake.run()", 500);
+      timer = setInterval("snake.run()", 200);
     });
   }
 }
