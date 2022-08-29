@@ -1,6 +1,5 @@
 @charset "utf-8"
 
-
 /*スライドショーの作成*/
 
 .swiper {
@@ -33,7 +32,7 @@
   background-color: rgba(0, 61, 125, 0.1);
 }
 
-.swiper-slide-active>img {
+.swiper-slide-active > img {
   transform: none;
 }
 
@@ -55,29 +54,16 @@
   transition: opacity 0.3s ease 1s, transform 0.3s ease 1s;
 }
 
-
-
-
-
-
-
-
-
 @-webkit-keyframes kf-arrow-anime {
-
-  0%,
-  50%,
-  100% {
+  0%, 50%, 100% {
     transform: translateY(-10%);
   }
-
   30% {
     transform: none;
   }
 }
 
 @keyframes kf-arrow-anime {
-
   0%,
   50%,
   100% {
@@ -124,7 +110,6 @@ span {
 .profile_area {
   width: 40%;
   margin: 1%;
-
 }
 
 .profile_area>img {
@@ -170,3 +155,4 @@ span {
 .animoBubble1:hover::before {
   transform: translate3d(50%, -50%, 0) scale3d(15, 15, 15)
 }
+
