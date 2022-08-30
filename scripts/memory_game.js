@@ -19,9 +19,40 @@
     card.onclick = click;
   }
 
+  let first  = null;
+  let second = null;
+  let timer =  null;
+
   function click(e){
+    if(timer){
+      clearTimeout(timer);
+      judge();
+    }
     let elm = e.target;
     elm.textContent = data[elm.index];
+
+    if(!first){
+      first = elm;
+    } else if(first.index === elm.index){
+      return;
+    } else{
+      second = elm;
+      timer = setTimeout(judge,1000);
+    }
+  }
+
+//ジャッジする関数
+  function judge(){
+    if(first.innerHTML == second.innerHTML){
+      first.style.visibility = 'hidden';
+      second.style.visibility = 'hidden';
+    } else{
+      first.innerHTML = '';
+      second.innerHTML = '';
+    }
+    first = null;
+    second = null;
+    timer = null;
   }
 }
 
