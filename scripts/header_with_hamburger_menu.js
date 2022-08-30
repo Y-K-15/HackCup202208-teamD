@@ -1,20 +1,19 @@
-"use script";
+"use strict";
 
-// overlay_menu全体をクリックで表示します。
-// リストの要素３つは、
-// 下から出てくるアニメーションと
-// ディレイをかけて表示します。
-
+// START HEADER 
 {
-  const open = document.getElementById("buttonToOpen");
+  const openButton = document.getElementById("buttonToOpen");
   const overlayMenu = document.querySelector(".overlay_menu");
-  const close = document.getElementById("buttonToClose");
+  const closeButton = document.getElementById("buttonToClose");
 
-  open.addEventListener("click", () => {
-    overlayMenu.classList.remove("hide");
+  openButton.addEventListener("click", () => {
+    overlayMenu.classList.add("show");
+    openButton.classList.add("hide");
   });
 
-  close.addEventListener("click", () => {
-    overlayMenu.classList.add("hide");
+  closeButton.addEventListener("click", () => {
+    overlayMenu.classList.remove("show");
+    openButton.classList.remove("hide");
   });
 }
+// END HEADER 
