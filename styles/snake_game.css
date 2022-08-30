@@ -1,7 +1,5 @@
 body {
   margin: 0;
-  display: flex;
-  justify-content: center;
   background-color: #99CC99;
 }
 
@@ -10,6 +8,9 @@ header {
   width: 100%;
   height: 12vh;
   background-color: lightgrey;
+  background-color: #659933;
+  /* background: linear-gradient(to bottom, #336633, lightgray); */
+  box-shadow: 0px 1vh 8px 0px grey;
   display: flex;
 }
 
@@ -174,9 +175,9 @@ header {
 
 /* START MAIN  */
 main {
-  height: 100vh;
-  padding-top: 12vh;
+  height: 88vh;
   display: flex;
+  justify-content: center;
   align-items: center;
 }
 
