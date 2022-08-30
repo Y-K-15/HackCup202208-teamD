@@ -1,0 +1,192 @@
+/* START HEADER  */
+header {
+  width: 100%;
+  height: 12vh;
+  background-color: lightgrey;
+  display: flex;
+}
+
+.logo_area {
+  width: 50%;
+  height: 100%;
+  padding-left: 5%;
+  display: flex;
+  align-items: center;
+}
+.logo {
+  padding: 2.5% 5%;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: bold;
+  font-size: 200%;
+  border: dotted;
+  border-radius: 10px;
+  text-shadow: 2px 2px 2px gray;
+}
+.men {
+  color: blue;
+}
+.women {
+  color: red;
+}
+.logo_gender {
+  transition: 0.5s;
+}
+.logo_gender:hover{
+  font-size: 120%;
+  text-shadow: 8px 8px 4px gray;
+}
+
+.hamburger_menu_button_area_to_open {
+  width: 50%;
+  height: 100%;
+  padding-right: 5%;
+}
+.humburger_menu_button_to_open {
+  width: 50px;
+  height: 100%;
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+}
+.humburger_menu_button{
+  transition: 0.3s;
+}
+.humburger_menu_button:hover {
+  transform: translate(-2px, -2px);
+}
+.hide{
+  display: none;
+  pointer-events: none;
+}
+.hamburger_menu_bar {
+  width: 40px;
+  height: 4px;
+  background-color: white;
+  border-radius: 5px;
+  border: solid;
+  box-shadow: 1px 1px darkgrey;
+  transition: 0.3s;
+}
+.hamburger_menu_bar_first {
+  margin-bottom: 4px;
+}
+.hamburger_menu_bar_second {
+  margin-bottom: 4px;
+}
+
+/* START GLOBAL NAVIGATION */
+.overlay_menu {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  position: fixed;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.5s;
+}
+.show {
+  opacity: 0.8;
+  pointer-events: auto;
+}
+.hamburger_menu_button_area_to_close {
+  height: 12vh;
+  padding-right: 5%;
+}
+.humburger_menu_button_to_close {
+  width: 50px;
+  height: 100%;
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.overlay_menu_navigation_area {
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.overlay_menu ul {
+  text-align: center;
+}
+.overlay_menu li {
+  margin-bottom: 40%;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.overlay_menu li:hover {
+  font-size: 28px;
+  text-shadow: 4px 4px 4px gray;
+}
+
+.pc_menu{
+  display: none;
+}
+
+@media (min-width: 800px) {
+  .hamburger_menu_button_area_to_open{
+    display: none;
+  }
+  .overlay_menu{
+    display: none;
+  }
+  .pc_menu{
+    display: block;
+    width: 50%;
+  }
+  .pc_menu_global_navigation{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .pc_menu ul{
+    width: 100%;
+    padding-right: 10%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .pc_menu ul li{
+    transition: 0.5s;
+  }
+  .pc_menu ul li:hover {
+    font-size: 18px;
+    text-shadow: 4px 4px 4px gray;
+  }
+}
+/* END GLOBAL NAVIGATION */
+/* END HEADER  */
+
+/* START MAIN  */
+/* main {
+padding-top: 12vh;
+⬆︎必ずmainにこれを含める（ヘッダーとメイン要素が被ることを防ぐため）
+} */
+
+#clock{
+  font-size: 30px;
+}
+
+.field{
+  width: 230px;
+}
+
+.card{
+  background-color: pink;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  border: 1px solid black;
+  float: left;
+}
+/* END MAIN  */
+
+
