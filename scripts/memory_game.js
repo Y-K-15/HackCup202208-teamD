@@ -1,5 +1,23 @@
 'use strict' ;
 
+// START HEADER 
+{
+  const openButton = document.getElementById("buttonToOpen");
+  const overlayMenu = document.querySelector(".overlay_menu");
+  const closeButton = document.getElementById("buttonToClose");
+
+  openButton.addEventListener("click", () => {
+    overlayMenu.classList.add("show");
+    openButton.classList.add("hide");
+  });
+
+  closeButton.addEventListener("click", () => {
+    overlayMenu.classList.remove("show");
+    openButton.classList.remove("hide");
+  });
+}
+// END HEADER 
+
 {
   const sourse = [0,1,2,3,4,5,6,7,8,9,
     0,1,2,3,4,5,6,7,8,9]
