@@ -46,6 +46,8 @@
     if(first.innerHTML == second.innerHTML){
       first.style.visibility = 'hidden';
       second.style.visibility = 'hidden';
+      mekuri += 2;
+      if(mekuri === data.length) clearInterval(timer2); 
     } else{
       first.innerHTML = '';
       second.innerHTML = '';
@@ -54,6 +56,13 @@
     second = null;
     timer = null;
   }
+
+  let count = 0;
+  let mekuri = 0;
+  let clock = document.getElementById('clock');
+  let timer2 = setInterval(function(){
+    // clock.innerHTML = '経過時間:'+(++count);
+  },1000)
 }
 
 
