@@ -21,7 +21,6 @@
   transition: transform 1.9s ease;
   z-index: 0;
 }
-
 .swiper-slide::after {
   content: "";
   position: absolute;
