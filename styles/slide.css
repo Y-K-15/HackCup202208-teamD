@@ -8,6 +8,10 @@ header {
   display: flex;
 }
 
+.slide_header{
+  display: flex;
+}
+
 .logo_area {
   width: 50%;
   height: 100%;
@@ -275,7 +279,7 @@ h3 {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-h3, {
+h3{
   font-size: small;
 }
 
