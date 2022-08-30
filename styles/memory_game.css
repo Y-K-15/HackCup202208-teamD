@@ -171,6 +171,10 @@ padding-top: 12vh;
 ⬆︎必ずmainにこれを含める（ヘッダーとメイン要素が被ることを防ぐため）
 } */
 
+#clock{
+  font-size: 30px;
+}
+
 .field{
   width: 230px;
 }
