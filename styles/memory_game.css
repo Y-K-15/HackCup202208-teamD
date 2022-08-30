@@ -1,9 +1,13 @@
+* {
+  margin: 0;
+}
 /* START HEADER  */
 header {
   width: 100%;
   height: 12vh;
   background-color: lightgrey;
   display: flex;
+  position: fixed;
 }
 
 .logo_area {
@@ -151,10 +155,12 @@ header {
   .pc_menu ul{
     width: 100%;
     padding-right: 10%;
+    padding-left: 0;
     display: flex;
     justify-content: space-between;
   }
   .pc_menu ul li{
+    list-style-type: none;
     transition: 0.5s;
   }
   .pc_menu ul li:hover {
@@ -166,10 +172,9 @@ header {
 /* END HEADER  */
 
 /* START MAIN  */
-/* main {
+main {
 padding-top: 12vh;
-⬆︎必ずmainにこれを含める（ヘッダーとメイン要素が被ることを防ぐため）
-} */
+}
 
 #clock{
   font-size: 30px;
