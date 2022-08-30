@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Snake Game</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"> 
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+  <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=DynaPuff:wght@400;500;600;700&family=Reggae+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles/reset.css">
+  <link rel="stylesheet" href="../styles/snake_game.css">
+</head>
+
+<body>
+      <!-- START HEADER -->
+      <header>
+        <div class="logo_area">
+          <div class="logo">
+            リケ<span class="women logo_gender">ジョ</span> と 文系<span class="men logo_gender"
+              >男子</span
+            >
+          </div>
+        </div>
+  
+        <!-- START GLOBAL NAVIGATION  -->
+        <div class="hamburger_menu_button_area_to_open">
+          <div class="humburger_menu_button humburger_menu_button_to_open" id="buttonToOpen">
+            <div class="hamburger_menu_bar hamburger_menu_bar_first"></div>
+            <div class="hamburger_menu_bar hamburger_menu_bar_second"></div>
+            <div class="hamburger_menu_bar hamburger_menu_bar_third"></div>
+          </div>
+        </div>
+  
+        <div class="overlay_menu">
+          <div class="hamburger_menu_button_area_to_close">
+            <div class=" humburger_menu_button humburger_menu_button_to_close" id="buttonToClose">
+              <div class="hamburger_menu_bar hamburger_menu_bar_first"></div>
+              <div class="hamburger_menu_bar hamburger_menu_bar_second"></div>
+              <div class="hamburger_menu_bar"></div>
+            </div>
+          </div>
+          <nav class="overlay_menu_navigation_area">
+            <ul>
+              <li><a href="../index.html">✨ チーム紹介 ✨</a></li>
+              <li><a href="../Memory game/index.html">😁 ゲーム① 😁</a></li>
+              <li><a href="./index.html">😆 ゲーム② 😆</a></li>
+            </ul>
+          </nav>
+        </div>
+  
+        <div class="pc_menu">
+          <nav class="pc_menu_global_navigation">
+            <ul>
+              <li><a href="../index.html">✨ チーム紹介 ✨</a></li>
+              <li><a href="../Memory game/index.html">😁 ゲーム① 😁</a></li>
+              <li><a href="./index.html">😆 ゲーム② 😆</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <!-- END GLOBAL NAVIGATION  -->
+      <!-- END HEADER  -->
+      
+  <!-- START MAIN -->
+  <main>
+    <section id="js-startMenu" class="start_menu_section ">
+      <div>Snake Game</div>
+      <button id="js-startButton">Start!</button>
+      <section class="start_menu_instruction">
+        <div class="start_menu_instruction_mapsize">
+          <h1>MAP SIZE</h1>
+          <h2>pc: 800×600<br>tablet: 500×600<br>phone: 300×500</h2>
+        </div>
+        <div class="start_menu_instruction_rule">
+          <h1>説明</h1>
+          <h2>果物を食べると、蛇が長くなる。<br>地図の端に触れると、ゲームアウト。<br>蛇の頭が体に触れると、ゲームアウト。</h2>
+        </div>
+      </section>
+
+    </section>
+    <div id="js-map" class="main_map disabled"></div>
+    <section id="js-overMenu" class="over_menu_section disabled">
+      <div>Your Snake's Length:</div>
+      <div id="js-score"></div>
+      <button id="js-restartButton">Try Again!</button>
+    </section>
+  </main>
+  <!-- END MAIN -->
+
+  <script src="../scripts/snake_game.js"></script>
+</body>
+
+</html>
