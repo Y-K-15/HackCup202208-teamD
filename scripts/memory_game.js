@@ -37,6 +37,10 @@
     card.onclick = click;
   }
 
+  let count = 0;
+  let mekuri = 0;
+  let clock = document.getElementById('clock');
+
   let first  = null;
   let second = null;
   let timer =  null;
@@ -65,7 +69,9 @@
       first.style.visibility = 'hidden';
       second.style.visibility = 'hidden';
       mekuri += 2;
-      if(mekuri === data.length) clearInterval(timer2); 
+      if(mekuri === data.length) {
+        clearInterval(timer2);
+      }
     } else{
       first.innerHTML = '';
       second.innerHTML = '';
@@ -75,11 +81,8 @@
     timer = null;
   }
 
-  let count = 0;
-  let mekuri = 0;
-  let clock = document.getElementById('clock');
   let timer2 = setInterval(function(){
-    clock.innerHTML = '経過時間:'+(++count);
+    clock.innerHTML = '経過時間:' + ' ' +(++count) + '秒';
   },1000)
 }
 
