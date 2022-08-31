@@ -1,5 +1,6 @@
 * {
   margin: 0;
+  padding: 0;
 }
 /* START HEADER  */
 header {
@@ -37,7 +38,7 @@ header {
 .logo_gender {
   transition: 0.5s;
 }
-.logo_gender:hover{
+.logo_gender:hover {
   font-size: 120%;
   text-shadow: 8px 8px 4px gray;
 }
@@ -56,13 +57,13 @@ header {
   justify-content: center;
   cursor: pointer;
 }
-.humburger_menu_button{
+.humburger_menu_button {
   transition: 0.3s;
 }
 .humburger_menu_button:hover {
   transform: translate(-2px, -2px);
 }
-.hide{
+.hide {
   display: none;
   pointer-events: none;
 }
@@ -133,36 +134,36 @@ header {
   text-shadow: 4px 4px 4px gray;
 }
 
-.pc_menu{
+.pc_menu {
   display: none;
 }
 
 @media (min-width: 800px) {
-  .hamburger_menu_button_area_to_open{
+  .hamburger_menu_button_area_to_open {
     display: none;
   }
-  .overlay_menu{
+  .overlay_menu {
     display: none;
   }
-  .pc_menu{
+  .pc_menu {
     display: block;
     width: 50%;
   }
-  .pc_menu_global_navigation{
+  .pc_menu_global_navigation {
     width: 100%;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  .pc_menu ul{
+  .pc_menu ul {
     width: 100%;
     padding-right: 10%;
     padding-left: 0;
     display: flex;
     justify-content: space-between;
   }
-  .pc_menu ul li{
+  .pc_menu ul li {
     list-style-type: none;
     transition: 0.5s;
   }
@@ -176,25 +177,32 @@ header {
 
 /* START MAIN  */
 main {
-padding-top: 13vh;
+  width: 100%;
+  height: 100vh;
+  padding-top: 13vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-#clock{
+#clock {
   font-size: 30px;
 }
 
-.field{
-  width: 230px;
+.field {
+  width: 80%;
+  max-width: 400px;
+  height: 80%;
 }
 
-.card{
+.card {
   background-color: pink;
-  width: 40px;
-  height: 40px;
+  width: 20%;
+  height: 10%;
   text-align: center;
+  line-height: 180%;
+  font-size: 200%;
   border: 1px solid black;
   float: left;
 }
 /* END MAIN  */
-
-
