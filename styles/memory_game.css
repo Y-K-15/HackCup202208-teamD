@@ -24,7 +24,7 @@ header {
   padding: 2.5% 5%;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-weight: bold;
-  font-size: 200%;
+  font-size: 70%;
   border: dotted;
   border-radius: 10px;
   text-shadow: 2px 2px 2px gray;
@@ -139,6 +139,9 @@ header {
 }
 
 @media (min-width: 800px) {
+  .logo_area{
+    font-size: 200%;
+  }
   .hamburger_menu_button_area_to_open {
     display: none;
   }
@@ -177,22 +180,33 @@ header {
 
 /* START MAIN  */
 main {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
-  padding-top: 13vh;
+  padding-top: 12vh;
+}
+
+#clock {
+  width: 100%;
+  height: 25vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-#clock {
-  font-size: 30px;
+.field_cover {
+  width: 100%;
+  height: 63vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .field {
   width: 80%;
-  max-width: 400px;
-  height: 80%;
+  height: 100%;
+  padding-top: 10vh;
+  padding-left: 10vw;
+
 }
 
 .card {
@@ -200,9 +214,41 @@ main {
   width: 20%;
   height: 10%;
   text-align: center;
-  line-height: 180%;
+  line-height: 140%;
   font-size: 200%;
   border: 1px solid black;
   float: left;
+}
+@media (min-width: 800px) {
+  main {
+    width: 100%;
+    height: 100vh;
+    padding-top: 13vh;
+    display: flex;
+    justify-content: center;
+  }
+  
+  #clock {
+    width: 30%;
+    padding-top: 30vh;
+    padding-left: 10%;
+  }
+  .field {
+    width: 70%;
+    max-width: 400px;
+    min-width: 300px;
+    height: 80%;
+    padding-top: 10vh;
+  }
+  .card {
+    background-color: pink;
+    width: 20%;
+    height: 10%;
+    text-align: center;
+    line-height: 140%;
+    font-size: 200%;
+    border: 1px solid black;
+    float: left;
+  }
 }
 /* END MAIN  */

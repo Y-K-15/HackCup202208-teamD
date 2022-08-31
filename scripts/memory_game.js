@@ -79,7 +79,7 @@
   let mekuri = 0;
   let clock = document.getElementById('clock');
   let timer2 = setInterval(function(){
-    // clock.innerHTML = '経過時間:'+(++count);
+    clock.innerHTML = '経過時間:'+(++count);
   },1000)
 }
 
