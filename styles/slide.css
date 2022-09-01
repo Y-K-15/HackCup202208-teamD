@@ -243,6 +243,11 @@ padding-top: 20vh;
   transition: opacity 0.3s ease 1s, transform 0.3s ease 1s;
 }
 
+/*PCでは折り返し無効*/
+.sma{
+  display: none;
+}
+
 @-webkit-keyframes kf-arrow-anime {
 
   0%,
@@ -348,3 +353,12 @@ h3{
   transform: translate3d(50%, -50%, 0) scale3d(15, 15, 15)
 }
 /* END MAIN  */
+
+@media(max-width:800px){
+  .hero_title{
+    text-align: center;
+  }
+  .sma{
+    display: block;
+  }
+}
