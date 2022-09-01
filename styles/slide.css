@@ -188,6 +188,7 @@ padding-top: 20vh;
   top: 0;
 }
 
+
 /*スライドショーの作成*/
 
 .swiper {
@@ -209,6 +210,7 @@ padding-top: 20vh;
   transition: transform 1.9s ease;
   z-index: 0;
 }
+
 .swiper-slide::after {
   content: "";
   width: 100%;
@@ -216,7 +218,8 @@ padding-top: 20vh;
   background-color: rgba(0, 61, 125, 0.1);
 }
 
-.swiper-slide-active>img {
+
+.swiper-slide-active > img {
   transform: none;
 }
 
@@ -240,6 +243,11 @@ padding-top: 20vh;
   transition: opacity 0.3s ease 1s, transform 0.3s ease 1s;
 }
 
+/*PCでは折り返し無効*/
+.sma{
+  display: none;
+}
+
 @-webkit-keyframes kf-arrow-anime {
 
   0%,
@@ -254,7 +262,6 @@ padding-top: 20vh;
 }
 
 @keyframes kf-arrow-anime {
-
   0%,
   50%,
   100% {
@@ -346,3 +353,12 @@ h3{
   transform: translate3d(50%, -50%, 0) scale3d(15, 15, 15)
 }
 /* END MAIN  */
+
+@media(max-width:800px){
+  .hero_title{
+    text-align: center;
+  }
+  .sma{
+    display: block;
+  }
+}
